@@ -16,12 +16,7 @@ export class Builder {
 
   _oldestValue (cleanedSeries) {
     return _.reduce(cleanedSeries, (memo, points) => {
-      var sum = _.sum(points);
-	console.log(sum);
-	console.log(points);
-	return memo + points[0]*3
-      // return memo + _.sum(points)
-      // return memo + points[0] + points[1] + points[3]
+      return memo + points[0]
     }, 0)
   }
 

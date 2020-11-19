@@ -35,20 +35,22 @@ var Builder = exports.Builder = function () {
     key: '_change',
     value: function _change(oldestValue, latestValue) {
       var change = latestValue - oldestValue;
-      return change / oldestValue * 100;
+      return change; 
+// oldestValue * 100;
+//	return latestValue // show the number of visits that day or present or live instead
     }
   }, {
     key: '_oldestValue',
     value: function _oldestValue(cleanedSeries) {
       return _lodash2.default.reduce(cleanedSeries, function (memo, points) {
-        return memo + points[0];
+        return memo + _.sum(points)/(points.length);
       }, 0);
     }
   }, {
     key: '_latestValue',
     value: function _latestValue(cleanedSeries) {
       return _lodash2.default.reduce(cleanedSeries, function (memo, points) {
-        return memo + points[points.length - 1];
+        return memo + (points[points.length - 1]);
       }, 0);
     }
   }, {
