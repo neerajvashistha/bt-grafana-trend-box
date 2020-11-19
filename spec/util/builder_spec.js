@@ -14,7 +14,7 @@ describe('Builder', () => {
         { target: 'b', datapoints: [[1, 'ts'], [2, 'ts']] }
       ]
 
-      let expected = { number: 4, percent: 100 }
+      let expected = { number: 4, number2: 100 }
       expect(subject.call(seriesList)).toEqual(expected)
     })
 
@@ -23,12 +23,12 @@ describe('Builder', () => {
         { target: 'a', datapoints: [[null, 'ts'], [null, 'ts']] }
       ]
 
-      let expected = { number: 0, percent: NaN }
+      let expected = { number: 0, number2: NaN }
       expect(subject.call(seriesList)).toEqual(expected)
     })
 
     it('copes if the series lists are undefined', () => {
-      let expected = { number: 0, percent: NaN }
+      let expected = { number: 0, number2: NaN }
       expect(subject.call([])).toEqual(expected)
     })
   })

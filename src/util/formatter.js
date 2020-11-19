@@ -5,7 +5,7 @@ export class Formatter {
   }
 
   call (box) {
-    box.percent = this._format(box.percent, 'percent')
+    box.number2 = this._format(box.number2, 'number2')
     box.number = this._format(box.number, this.panel.format)
   }
 

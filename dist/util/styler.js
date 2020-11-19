@@ -23,13 +23,13 @@ var Styler = exports.Styler = function () {
       header.css('max-height', '27px');
       menu.css('font-size', '13px');
 
-      box.percentStyle = this._percentStyle();
+      box.number2Style = this._number2Style();
       box.numberStyle = this._numberStyle();
     }
   }, {
-    key: '_percentStyle',
-    value: function _percentStyle() {
-      return { 'font-weight': 'bold', 'font-size': this.panel.percentSize };
+    key: '_number2Style',
+    value: function _number2Style() {
+      return { 'font-weight': 'bold', 'font-size': this.panel.number2Size };
     }
   }, {
     key: '_numberStyle',

@@ -7,7 +7,7 @@ describe('Presenter', () => {
 
   beforeEach(() => {
     panel = { defaultColor: 'default', thresholds: [] }
-    box = { percent: 99.5 }
+    box = { number2: 99.5 }
     subject = new Presenter(panel)
   })
 
