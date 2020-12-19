@@ -40,7 +40,7 @@ var panelDefaults = {
   linkIndex: '0',
   displayValue: 'value',
   titleSize: '20px',
-  number2Size: '30px',
+  percentSize: '30px',
   numberSize: '14px',
   thresholds: [],
   format: 'none',

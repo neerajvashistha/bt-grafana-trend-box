@@ -9,12 +9,12 @@ export class Styler {
     header.css('max-height', '27px')
     menu.css('font-size', '13px')
 
-    box.number2Style = this._number2Style()
+    box.percentStyle = this._percentStyle()
     box.numberStyle = this._numberStyle()
   }
 
-  _number2Style () {
-    return { 'font-weight': 'bold', 'font-size': this.panel.number2Size }
+  _percentStyle () {
+    return { 'font-weight': 'bold', 'font-size': this.panel.percentSize }
   }
 
   _numberStyle () {

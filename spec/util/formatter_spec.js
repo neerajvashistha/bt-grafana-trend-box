@@ -10,17 +10,17 @@ describe('Formatter', () => {
     format = jasmine.createSpy().and.returnValue('custom')
 
     let kbn = { valueFormats: {
-      custom: format, number2: () => { return '5%' }
+      custom: format, percent: () => { return '5%' }
     } }
 
     subject = new Formatter(panel, kbn)
-    box = { number: 5, number2: 10 }
+    box = { number: 5, percent: 10 }
   })
 
   describe('call', () => {
-    it('formats the number2 as a number2', () => {
+    it('formats the percent as a percentage', () => {
       subject.call(box)
-      expect(box.number2).toEqual('5%')
+      expect(box.percent).toEqual('5%')
     })
 
     it('formats the number with a given format', () => {

@@ -19,7 +19,7 @@ var Formatter = exports.Formatter = function () {
   _createClass(Formatter, [{
     key: 'call',
     value: function call(box) {
-      box.number2 = this._format(box.number2, this.panel.format);
+      box.percent = this._format(box.percent, this.panel.format);
       box.number = this._format(box.number, this.panel.format);
     }
   }, {

@@ -23,13 +23,21 @@ var Styler = exports.Styler = function () {
       header.css('max-height', '27px');
       menu.css('font-size', '13px');
 
-      box.number2Style = this._number2Style();
+      var percentAttributes = this._percentStyle(box.percent);
+      box.percentStyle = percentAttributes.style;
+      box.percent = percentAttributes.value;
       box.numberStyle = this._numberStyle();
     }
   }, {
-    key: '_number2Style',
-    value: function _number2Style() {
-      return { 'font-weight': 'bold', 'font-size': this.panel.number2Size };
+    key: '_percentStyle',
+    value: function _percentStyle(percent) {
+      percent = parseInt(percent);
+      this.panel.percentSize = '20px';
+      if(percent >= 0){
+        return {style: { 'font-weight': 'bold', 'font-size': this.panel.percentSize, 'color': 'green'}, value: percent + "\u25B2"};
+      }else{
+        return {style: { 'font-weight': 'bold', 'font-size': this.panel.percentSize, 'color': 'red'}, value: percent + "\u25BC"};
+      }
     }
   }, {
     key: '_numberStyle',

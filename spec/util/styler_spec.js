@@ -9,7 +9,7 @@ describe('Styler', () => {
   let box
 
   beforeEach(() => {
-    let panel = { number2Size: 1, numberSize: 1, titleSize: 1 }
+    let panel = { percentSize: 1, numberSize: 1, titleSize: 1 }
     container = jasmine.createSpyObj('container', ['css'])
     title = jasmine.createSpyObj('title', ['css'])
     header = jasmine.createSpyObj('header', ['css'])
@@ -19,10 +19,10 @@ describe('Styler', () => {
   })
 
   describe('call', () => {
-    it('assigns the style for the number2', () => {
+    it('assigns the style for the percentage', () => {
       subject.call(box, container, title, header, menu)
-      expect(box.number2Style['font-weight']).toEqual('bold')
-      expect(box.number2Style['font-size']).toEqual(1)
+      expect(box.percentStyle['font-weight']).toEqual('bold')
+      expect(box.percentStyle['font-size']).toEqual(1)
     })
 
     it('assigns the style for the number', () => {

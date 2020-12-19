@@ -6,12 +6,12 @@ export class Presenter {
   }
 
   call (box) {
-    box.color = this._color(box.number2)
+    box.color = this._color(box.percent)
   }
 
-  _color (number2) {
+  _color (percent) {
     var ts = _.sortBy(this.panel.thresholds, t => this._value(t))
-    var threshold = _.find(_.reverse(ts), t => number2 >= this._value(t))
+    var threshold = _.find(_.reverse(ts), t => percent >= this._value(t))
     return threshold ? threshold.color : this.panel.defaultColor
   }
 

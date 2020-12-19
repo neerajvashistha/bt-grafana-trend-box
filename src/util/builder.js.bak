@@ -5,8 +5,8 @@ export class Builder {
     var cleanedSeries = _.map(seriesList, this._cleanup)
     var oldestValue = this._oldestValue(cleanedSeries)
     var latestValue = this._latestValue(cleanedSeries)
-    var number2 = this._change(oldestValue, latestValue)
-    return { number: latestValue || 0, number2: number2 }
+    var percent = this._change(oldestValue, latestValue)
+    return { number: latestValue || 0, percent: percent }
   }
 
   _change (oldestValue, latestValue) {

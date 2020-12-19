@@ -25,18 +25,18 @@ var Presenter = exports.Presenter = function () {
   _createClass(Presenter, [{
     key: 'call',
     value: function call(box) {
-      box.color = this._color(box.number2);
+      box.color = this._color(box.percent);
     }
   }, {
     key: '_color',
-    value: function _color(number2) {
+    value: function _color(percent) {
       var _this = this;
 
       var ts = _lodash2.default.sortBy(this.panel.thresholds, function (t) {
         return _this._value(t);
       });
       var threshold = _lodash2.default.find(_lodash2.default.reverse(ts), function (t) {
-        return number2 >= _this._value(t);
+        return percent >= _this._value(t);
       });
       return threshold ? threshold.color : this.panel.defaultColor;
     }
