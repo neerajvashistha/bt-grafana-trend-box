@@ -11,7 +11,7 @@ export class Builder {
 
   _change (oldestValue, latestValue) {
     var change = latestValue - oldestValue
-    return (change / oldestValue) * 100
+    return change
   }
 
   _oldestValue (cleanedSeries) {
@@ -19,7 +19,7 @@ export class Builder {
       var sum = _.sum(points);
 	console.log(sum);
 	console.log(points);
-	return memo + points[0]*3
+	return memo + _.sum(points)/(points.length);
       // return memo + _.sum(points)
       // return memo + points[0] + points[1] + points[3]
     }, 0)

@@ -14,7 +14,13 @@ export class Styler {
   }
 
   _percentStyle () {
-    return { 'font-weight': 'bold', 'font-size': this.panel.percentSize }
+    percent = parseInt(percent);
+      this.panel.percentSize = '20px';
+      if(percent >= 0){
+        return {style: { 'font-weight': 'bold', 'font-size': this.panel.percentSize, 'color': 'green'}, value: percent + "\u25B2"};
+      }else{
+        return {style: { 'font-weight': 'bold', 'font-size': this.panel.percentSize, 'color': 'red'}, value: percent + "\u25BC"};
+      }
   }
 
   _numberStyle () {

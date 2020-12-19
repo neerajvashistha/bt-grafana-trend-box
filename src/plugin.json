@@ -1,19 +1,19 @@
 {
   "type": "panel",
   "name": "Trend Box",
-  "id": "btplc-trend-box-panel",
+  "id": "trend-box-panel",
 
   "info": {
     "version": "0.1.9",
     "description": "Box panel showing trends over series",
     "author": {
-      "name": "BT Plc",
-      "url": "https://bt.com"
+      "name": "neeraj vashistha",
+      "url": "https://github.com/neerajvashistha"
     },
     "keywords": ["trend", "box", "panel"],
     "links": [
-      {"name": "MIT Licence", "url": "https://github.com/BT-OpenSource/bt-grafana-trend-box/blob/master/LICENSE"},
-      {"name": "Project Site", "url": "https://github.com/BT-OpenSource/bt-grafana-trend-box"}
+      {"name": "MIT Licence", "url": "https://github.com/neerajvashistha/bt-grafana-trend-box/blob/master/LICENSE"},
+      {"name": "Project Site", "url": "https://github.com/neerajvashistha/bt-grafana-trend-box"}
     ],
     "screenshots": [
       {"name": "Trend Box", "path": "img/trend_box.png"},
